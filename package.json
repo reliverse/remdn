@@ -1,0 +1,39 @@
+{
+  "name": "@reliverse/remdn",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "@reliverse/remdn is a modern markdown automation CLI tool that helps you generate, update, and validate your Markdown files automatically. Designed with a code-first mindset and built on TypeScript, remdn keeps your README, docs, and various exports in sync with your project metadata, brand guidelines, and evolving content.",
+  "scripts": {
+    "pub": "relidler",
+    "dev": "bun src/main.ts",
+    "latest": "bun update --latest && bun check",
+    "check": "tsc --noEmit && eslint --cache --fix . && biome check --fix --unsafe . && knip-bun",
+    "agg": "relidler tools --tool agg --input src/libs/core/core-impl --out src/libs/core/core-main.ts --recursive --named --strip src/libs/core"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.9.4",
+    "@eslint/js": "^9.26.0",
+    "@reliverse/cli-cfg": "^1.6.5",
+    "@reliverse/relidler-cfg": "^1.1.3",
+    "@stylistic/eslint-plugin": "^4.2.0",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.15.17",
+    "@types/picomatch": "^4.0.0",
+    "eslint": "^9.26.0",
+    "eslint-plugin-no-relative-import-paths": "^1.6.1",
+    "eslint-plugin-perfectionist": "^4.13.0",
+    "knip": "^5.55.1",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.1",
+    "vitest": "^3.1.3"
+  },
+  "dependencies": {
+    "@reliverse/rempts": "^1.6.2",
+    "fdir": "^6.4.4",
+    "fs-extra": "^11.3.0",
+    "mlly": "^1.7.4",
+    "pathe": "^2.0.3",
+    "picomatch": "^4.0.2"
+  }
+}

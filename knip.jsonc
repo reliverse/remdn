@@ -1,0 +1,10 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "project": ["**/*.{ts,js}"],
+  "entry": ["**/*.{config,cfg}.{ts,js}", "src/main.ts", "src/**/*-main.ts"],
+
+  // TODO: remove "src/libs" from here in the future
+  "ignore": ["node_modules", "dist-jsr", "dist-npm", "dist-libs", "src/libs"],
+
+  "ignoreBinaries": ["relidler"]
+}

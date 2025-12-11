@@ -1,0 +1,83 @@
+# contributors
+
+The `contributors` generator generates an image of contributors using [contrib.rocks](https://contrib.rocks/) service plus additional data about authors and license.
+
+## Example
+
+<!-- remdn:example generator=contributors author=pi0 license=MIT -->
+
+### Input
+
+    <!-- remdn:contributors author="pi0" license="MIT" -->
+    <!-- /remdn -->
+
+### Output
+
+    <!-- remdn:contributors author="pi0" license="MIT" -->
+
+    Published under the [MIT](https://github.com/reliverse/remdn/blob/main/LICENSE) license.
+    Made by [@pi0](https://github.com/pi0) and [community](https://github.com/reliverse/remdn/graphs/contributors) 💛
+    <br><br>
+    <a href="https://github.com/reliverse/remdn/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=reliverse/remdn" />
+    </a>
+
+    <!-- /remdn -->
+
+<!-- /remdn -->
+
+## Arguments
+
+::field-group
+
+::field{name="provider" type="string"}
+Available providers are `markupgo` and `contrib.rocks` (default is `contrib.rocks`)
+::
+
+::field{name="github" type="string"}
+Github repository name (by default tries to read from `package.json`) e.g. `reliverse/remdn`
+::
+
+::field{name="max" type="number"}
+Max contributor count (100 by default).
+
+Set to 0 for all contributors. Max avatar count is 500. (Only available for `markupgo`)
+::
+
+::field{name="circleSize" type="number"}
+Size of contributor circle (40 by default) (Only available for `markupgo`)
+::
+
+::field{name="circleSpacing" type="number"}
+Spacing between contributor circles (6 by default) (Only available for `markupgo`)
+::
+
+::field{name="circleRadius" type="number"}
+Radius of contributor circle (40 by default) (Only available for `markupgo`)
+::
+
+::field{name="center" type="boolean"}
+Center the contributor circles (false by default) (Only available for `markupgo`)
+::
+
+::field{name="markupGoLogo" type="boolean"}
+Show markupGo logo for credits.
+::
+
+::field{name="width" type="number"}
+Width of the image (890 by default) (Only available for `markupgo`)
+::
+
+::field{name="anon" type="boolean"}
+Include anonymous users (false by default)
+::
+
+::field{name="author" type="string"}
+Comma separated list of github usersnames.
+::
+
+::field{name="license" type="string"}
+Name of license.
+::
+
+::
